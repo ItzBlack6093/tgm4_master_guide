@@ -1,0 +1,118 @@
+@font-face {
+    font-family: CLK;
+    src: url('font/CLK.ttf');
+}
+
+html {
+    background: #000;
+	scroll-behavior: smooth;
+}
+
+#header {
+	position: -webkit-sticky;
+	position: sticky;
+	margin: -5em 0;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	height: fit-content;
+	background-color: #111;
+	padding: 0 2vw;
+	top: -6px;
+	box-shadow: 0px 2px 4px #0004;
+	z-index: 10000;
+	user-select: none !important;
+}
+
+#header>.header_nav {
+	display: inline-block;
+	font-family: 'CLK';
+	padding: 0 0.75em;
+	line-height: 56px;
+	height: 46px;
+	color: #888;
+	font-weight: 900;
+	font-size: 1.05em;
+	border-bottom: 2px solid #0000;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 0.3s border-bottom, 0.3s color;
+	margin-right: -2px;
+}
+#header>.header_nav:hover {
+	border-bottom: 2px solid #AAA;
+	color: #CCC;
+}
+#header>.header_nav.active {
+	border-bottom: 2px solid #FFF;
+	color: #FFF;
+}
+#header>.header_nav:active {
+	border-bottom: 2px solid #FFF;
+	color: #FFF;
+	transition: 0.05s border-top, 0.05s color;
+}
+
+.content {
+	font-family: "CLK";
+	color: #fff;
+	border-bottom: 3px dashed #666;
+	padding: 1em 0;
+	margin: 0 2em;
+	/* max-height: 4em; */
+	overflow: hidden;
+}
+.content > h1::before,
+.content > .subct > h2::before,
+.content > .subct > h3::before {
+	content: "•";
+	opacity: .2;
+	padding-right: .5em;
+}
+.content > .subct {
+	border-top: 1px dotted #444;
+}
+
+.note {
+	padding: 1em;
+	background-color: #111;
+	border-left: 5px solid currentColor;
+	color: #f00;
+	border-radius: 3px;
+}
+
+#medal_table {
+	background: #222;
+	border: 3px solid #999;
+	border-collapse: collapse;
+	margin: 1em;
+}
+
+#medal_table td, #medal_table th {
+	border: 1px solid #999;
+	padding: .25em;
+}
+
+.content center > * {
+	max-height: 50vh !important;
+	max-width: 50vw !important;
+}
+
+.setuprt.l1 {
+	color: #3d9
+}
+.setuprt.l2 {
+	color: #5d0
+}
+.setuprt.l3 {
+	color: #fb0
+}
+.setuprt.l4 {
+	color: #f72
+}
+.setuprt.l5 {
+	color: #f44
+}
+
+a {
+	color: #f69
+}

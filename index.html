@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris đóng băng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <a class="header_nav" data-target="intro">MỞ ĐẦU</a>
+        <a class="header_nav" data-target="basics">CƠ BẢN</a>
+        <a class="header_nav" data-target="medal">MEDAL</a>
+        <a class="header_nav" data-target="gimmicks">CÁC GIMMICK</a>
+        <a class="header_nav" data-target="km">KIRBY MACHINE</a>
+        <a class="header_nav" data-target="2w">ELEVATOR</a>
+        <a class="header_nav" data-target="123w">FUNNELING</a>
+        <a class="header_nav" data-target="ks">FREESTYLE</a>
+        <a class="header_nav" data-target="tetrisks">TETRIS + K.S.</a>
+        <a class="header_nav" data-target="end">KẾT</a>
+    </div>
+
+    <div class="content" id="intro">
+        <h1>MỞ ĐẦU</h1>
+        <p>Hi! Đây là một cái guide (chắc là) cơ bản để nói về chế độ Master của Tetris: The Grandmaster 4 - Absolute Eye</p>
+    </div>
+    <div class="content" id="basics">
+        <h1>CƠ BẢN VỀ MASTER MODE</h1>
+
+        <p>
+            Tương tự như chế độ T.A Death của TGM2P và Shirase của TGM3, các khối sẽ rơi xuống đáy bảng ngay khi xuất hiện. <br>
+            Ngoài ra, còn có những gimmick thách thức khả năng xếp gạch của bạn.
+        </p>
+        <h2>MỤC TIÊU</h2>
+        <p>Đạt level 2600 (2 lần)</p>
+        <div class="note" style="color: #f44;">Đó là gấp đôi chế độ Shirase của phần trước (1300 Level)</div>
+    </div>
+    <div class="content" id="medal">
+        <h1>HỆ THỐNG MEDAL</h1>
+        <p>Đạt được trong quá trình chơi. Có liên quan đến một số gimmick</p>
+        <center>
+            <table id="medal_table">
+                <caption>MEDALS</caption>
+                <tr>
+                    <th>Medal</th>
+                    <th>Điều kiện</th>
+                    <th>Level Boost</th>
+                    <th>Thời gian đóng băng (1/60 s)</th>
+                </tr>
+                <tr>
+                    <td style="background-color: #e22d8e; color: #000;">ALL CLEAR!</td>
+                    <td>Thực hiện All Clear</td>
+                    <td>+1 Level mỗi 6 medal</td>
+                    <td>+2.5 mỗi medal, làm tròn xuống</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #e9a915; color: #000;">TETRIS</td>
+                    <td>Lấp đầy 4 hàng cùng một lúc</td>
+                    <td>+1 Level mỗi 10 medal</td>
+                    <td>+1 mỗi medal</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #54e591; color: #000;">T-SPIN</td>
+                    <td>Thực hiện T-Spin Double (hoặc T-Spin Triple)</td>
+                    <td>+1 Level mỗi 16 medal</td>
+                    <td>+1 mỗi medal</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #3adbea; color: #000;">PIKII</td>
+                    <td>Lấp đầy hàng trong khu vực đóng băng</td>
+                    <td>+1 Level mỗi 28 medal</td>
+                    <td>+3 mỗi medal</td>
+                </tr>
+            </table>
+        </center>
+
+        <p>Level boost sẽ được áp dụng mỗi khi xóa hàng.</p>
+        <div class="note" style="color: #0bd;">
+            Từ đây trở xuống, số badge sẽ được viết bằng 4 con số nối với nhau bằng dấu gạch ngang (-) <br>
+            5-9-15-27 tương ứng với 5 All Clear, 9 Tetris, 15 T-Spin, 27 Pikii 
+        </div>
+    </div>
+    <div class="content" id="gimmicks">
+        <h1>CÁC GIMMICK</h1>
+        <div class="subct" id="pikii">
+            <h2>PIKII</h2>
+            <p><b>Thời điểm:</b> Level 300-399, 500-599, 700-999</p>
+
+            <p>Nửa dưới của bảng sẽ bị đóng băng. Khi bạn lấp đầy hàng trong khu vực này, nó sẽ không biến mất cho đến khi bạn vượt qua section hiện tại.</p>
+
+            <center>
+                <img src="img/pikii.png">
+                <br>
+                <i>Ví dụ về Pikii - có 5 hàng đóng băng đã lấp đầy</i>
+            </center>
+
+            <p>Từ level 700 đến 999, thì Pikii-2 sẽ xuất hiện. Khi vượt qua section, các hàng đóng băng đã lấp đầy sẽ biến mất, rồi bảng lại đóng băng</p>
+
+            <h3>CHIẾN THUẬT</h3>
+            <p><b>Hạn chế mắc sai lầm.</b> Khi đã mắc sai lầm, đặc biệt là ở Pikii-2, thì cơ hội sửa sai là rất ít.</p>
+        </div>
+        <div class="subct" id="cyclone">
+            <h2>CYCLONE</h2>
+            <p><b>Thời điểm:</b> Level 1000+ (1000-1299 ở bản Nintendo Switch)</p>
+
+            <p>Một số khối sẽ bị xoay sẵn.</p>
+            <p>Hộp NEXT sẽ cho bạn biêt hướng của 1 khối tiếp theo, các khối sau đó vẫn ở trạng thái bình thường.</p>
+
+            <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vSzIoLALntoHhnO1X5TopVyk03EVIYTb2IKnBCBCqriGujMA5E4eRTdmE-jue-QBFs8_dANXu5J99bk/pubembed?start=false&amp;loop=false&amp;delayms=3000"
+                width="480" height="306"></iframe>
+            </center>
+            <div class="note" style="color: #f22;">Nếu bạn không thấy slide, vui lòng tải lại trang</div>
+            <p>
+                Bạn chơi Tetris càng lâu, bạn sẽ nhận ra sự lĩn hàm của gimmick này. Đặc biệt là người chơi Standard Rule <br>
+                Đây cũng chính là một trong những lí do khiến Master Pikii rất khó
+            </p>
+
+            <h3>CHIẾN THUẬT</h3>
+            <p><b>Chơi chậm, nhìn Next. </b>Nếu chơi quá nhanh, bạn có thể nhìn nhầm hướng của khối tiếp theo, dẫn đến một chuỗi sai lầm.</p>
+        </div>
+        <div class="subct" id="masterpikii">
+            <h2>MASTER PIKII</h2>
+            <p><b>Thời điểm:</b> Level 1300+</p>
+
+            <p>Khối sau khi đặt xuống một khoảng thời gian sẽ bị đóng băng.</p>
+            <p>Khoảng thời gian đó được quyết định bằng số lượng medal hiện có. Bắt đầu từ 2f, cộng thêm khoảng thời gian kiếm được từ medal</p>
+            <center>
+                <img src="img/master_pikii_freezetime.gif">
+                <br>
+                <i>So sánh thời gian đóng băng</i>
+                <br>
+                <i>Edit: Thời gian dưới mỗi hình bị sai. Phải cộng thêm 2f</i>
+            </center>
+
+            <h3>CHIẾN THUẬT</h3>
+            <p>Nếu chiến thuật bạn chọn cần ít thời gian đóng băng, bạn có thể<b> cố ý lấy ít badge </b>để rút ngắn thời gian đóng băng.</p>
+        </div>
+        <div class="subct" id="endgame">
+            <h2>END GAME</h2>
+            <p><b>Thời điểm:</b> Level 2600</p>
+
+            <p>Sau khi đạt level 2600 với đủ điều kiện, Bạn sẽ tiến vào giai đoạn END GAME.</p>
+            <p>Bạn sẽ tua ngược về 65 giây trước. Và trong 65 giây tiếp theo, bạn phải đạt level 2600 một lần nữa.</p>
+            <center>
+                <img src="img/endgame.png">
+                <br>
+                <i>Bí bi bì bi bí bì bi bí bi bi bì...</i>
+            </center>
+
+            <h3>MỘT VÀI LƯU Ý</h3>
+            <ul>
+                <li><b>Toàn bộ bảng sẽ được "rã đông" một lần. </b>Nếu chiến thuật của bạn cần xây setup, bnj sẽ phải đập đi xây lại.</li>
+                <li><b>Medal vẫn giữ nguyên</b></li>
+            </ul>
+
+            <h3>CHIẾN THUẬT</h3>
+            <p><b>Chuẩn bị cho tay không run lúc đấy.</b> Hoạt ảnh tua ngược dài khoảng 25 giây, đủ để chuẩn bị tinh thần</p>
+        </div>
+        <div class="subct" id="4w">
+            <h3>"Không phải cứ 4-Wide là xong à?"</h3>
+            <p>
+                Nếu chơi Tetris đối kháng, bạn sẽ nghĩ ngay đến 4-wide <br>
+                Vấn đề ở đây là, khi xóa hàng có khối băng, phần trên sẽ không hạ xuống
+            </p>
+            <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vSRceQEpCJzaEODvbf0q__YuX3m7rQqvihwA-LwvEcc056jYrJ1VH27tFM7UfYVCN-VxnHe5qbSR5ae/pubembed?start=false&loop=false&delayms=3000"
+                width="480" height="306"></iframe>
+            </center>
+            <p>Và mọi thứ sẽ tệ hơn khi phần dư bị đóng băng. Nên bạn phải phá phần dư trước khi nó đóng băng.</p>
+        </div>
+    </div>
+    <div class="content">
+        <h1>SETUPS</h1>
+        <p>Oke, món khai vị dã xong, bây giờ sẽ là món chính. Đó là những cách để vượt qua Master Pikii</p>
+    </div>
+    <div class="content" id="km">
+        <h1>Kirby Machine</h1>
+        <p>Chỉ áp dụng cho Standard Rule</p>
+        <center>
+            <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/SjXgup55CAc?si=04Vw_RBxP_u1k8qR" title="Kirby Machine Demonstration"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <p>Sáng tạo bởi Kirby703, và đây là cách rất phổ biến vì nó là cách đầu tiên đạt được Gm</p>
+        <h3 style="color: #e66">Diff</h3>
+        <ul>
+            <li class="setuprt l5">Setup: Khó vai nho</li>
+            <li class="setuprt l5">Tỉ lệ mắc sai lầm: Gần như không có</li>
+            <li class="setuprt l2">Tốc độ đặt khối: Trung bình</li>
+            <li class="setuprt l1">Tốc độ xóa hàng: Cực nhanh, gần như khối nào cũng có thể xóa hàng</li>
+            <li class="setuprt l3">Thời gian đóng băng: ≈200f. 15-30-0-45 khi luyện tập, 0-50-0-50 thực tế</li>
+        </ul>
+        <h3 style="color: #f69">Từ dưới lên trên, setup này cần:</h3>
+        <ul>
+            <li>Lỗ để xóa S/Z</li>
+            <li>Phần rộng 2 khối (2W) để xóa khối O</li>
+            <li>Phần 3W để xóa khối L, J, T</li>
+            <li>Phần 4W để xóa khối I</li>
+        </ul>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQ2bDEiFWP-yNnlDfmJWMdRD4EzkiN7B7nDSqLoLoQUtDJg4Nw87MGyJ0mNMJ9dSi_z5UAjabe5iR5K/pubembed?start=false&amp;loop=false&amp;delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Phần lỗ để xóa S/Z sẽ áp dụng All-Spin</p>
+        <p>Phần 3W dùng để xóa L, J, T. Không thể xóa lẻ một khối nên phải kết hợp cả ba lại</p>
+        <p>O với I thì nhìn phát biết luôn phải để đâu</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQQ2nAKpAGr5DQRRQK6H6pajymUzyQWzYYnnlOTxD_WyHbQFJ5sdD1Qf44pZqNThwqhW1-59n4n0-gd/pubembed?start=false&amp;loop=false&amp;delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3 style="color: #3d9">Điểm thuận lợi</h3>
+        <p>Một khi đã xây xong setup, bạn có thể liên tục xóa hàng</p>
+        <p>Vì mỗi khối đều có thể xóa ít nhất một hàng, nên tốc độ tăng level của bạn sẽ rất nhanh</p>
+        <h3 style="color: #f44">Điểm bất lợi</h3>
+        <p>Một khi mắc sai lầm thì gần như không thể khôi phục. Nên bạn phải chơi hoàn hảo ở tốc độ cao.</p>
+        <p>Phải học hướng của khối S và Z. Điểm chung của cả hai khối này là: <b>Đưa tâm sang phải, xoay ngược chiều kim đồng hồ</b></p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRX7oITYttdBFMmKXlWFrZBg_QeTiCFZMZJzMcAmQg4boZMRN-8UZgSjO6hF7NxiNMwOcwJUKmpt2Ux/pubembed?start=false&amp;loop=false&amp;delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3 style="color: #dac">Mẹo</h3>
+        <p>Phần lỗ để xóa S/Z khá phức tạp. Nên học các cách xây nó sẽ giúp ích rất nhiều.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTZ351GZkZNY3AvHOSxVEHgrh3jNKLXz9xZD9ioO_oUBQ3xXLk8iHw2t_ShRGr-rJiXJxycR1GbKvK7/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Để ý thứ tự L, T, J. Nếu đã đặt J hoặc T, trừ I thì không có khối nào có thể đi vào vị trí mong muốn. Sử dụng hộp Hold để thay đổi thứ tự nếu cần.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTBi2Ty3ztqQpDJpN34mOe3bdMWjv61NRLANTWSoUPaO6JmYdTbm1YkLoa7yi44Mi8M6EIqhXnMUJaS/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Sau khi đặt khối L, nếu T, J đến muộn, phần dư của khối L sẽ đóng băng. Nên là có thể cân nhắc việc dùng cặp SL và LL.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRZZHaiBU8x5b_gsATRljhirHjoaBlzVQL6bgex0X_1_3dnEOWzZosfPro5qsExWuCHcEqwZASI2sJ4/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3>Biến thể: Kirby Machine + TSD</h3>
+        <center>
+            <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/Gdfnz5t6X7E?si=5adNr1e_QjdL8ykF" title="Kirby Machine Demonstration"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <p>Setup này nhắm vào việc tăng medal T-Spin. Nếu J đến trước T, bạn có thể thực hiện TSD với phần dư của khối J.</p>
+    </div>
+    <div class="content" id="2w">
+        <h1>Elevator (2 Wide)</h1>
+        <center>
+            <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/ANVoHdG0nSA?si=ke2bYMozgxGsZdPk" title="Elevator Demonstration"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <p>Sáng tạo bởi Yoshi</p>
+        <h3 style="color: #e66">Diff</h3>
+        <ul>
+            <li class="setuprt l2">Setup: Bình thường</li>
+            <li class="setuprt l3">Tỉ lệ mắc sai lầm: Có nhưng phải xử lí nhanh</li>
+            <li class="setuprt l2">Tốc độ đặt khối: Trung bình</li>
+            <li class="setuprt l2">Tốc độ xóa hàng: Trung bình</li>
+            <li class="setuprt l3">Thời gian đóng băng: ≈200f. 15-30-0-45 khi luyện tập, 0-50-0-50 thực tế</li>
+        </ul>
+        <h3 style="color: #f69">Từ dưới lên trên, setup này cần:</h3>
+        <ul>
+            <li>Phần 2W (khoảng 7-8 hàng)</li>
+            <li>Phần 3W (khoảng 5-6 hàng)</li>
+            <li>Phần 4W (ít nhất 1 hàng) để xóa khối I</li>
+        </ul>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSaA3lEx-ZOVLg7DaiHadYHETiHiLS0SW5qhhORAMHmbEHc0ZLkrm3ST1SCtToGnuvUD29PjFP7Hc1e/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Phần 2W dùng để xóa đa số khối. Thông thường sẽ dư ra một ô, tùy thuộc vào khối bạn dùng, khối dư đó có thể đi lên, xuống, sang trái, phải.</p>
+        <p>Phần 3W rất quan trọng vì nó được dùng để loại bỏ ô dư khi nó lên trên cao.</p>
+        <p>Có thể dùng các cặp khối kết hợp với phần 3W để tự xóa.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQ8Xak6sQCt2Hcng0hW7OFnJ86f2VD1Wq4GApO3UHDxI-dJbW516js1_rA9jmVKr6nwPeHjR3wxSYFH/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Phần 4W dùng để xóa khối I, nhưng vẫn có thể đặt khối I vào phần 2W để kiếm Tetris.</p>
+        <h3 style="color: #3d9">Điểm thuận lợi</h3>
+        <p>Giống Kirby Machine, một khi đã xây xong setup, bạn có thể liên tục xóa hàng.</p>
+        <h3 style="color: #f44">Điểm bất lợi</h3>
+        <p>Một khi đã mắc sai lầm ở phần 3W và các khối đó đóng băng, sẽ không thể tiếp cận phần 2W nữa.</p>
+        <h3 style="color: #dac">Mẹo</h3>
+        <p><b>Học các pattern xóa phần dư là rất quan trọng.</b> Nó hiệu quả hơn việc đặt bừa và cầu nguyện.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQ8Xak6sQCt2Hcng0hW7OFnJ86f2VD1Wq4GApO3UHDxI-dJbW516js1_rA9jmVKr6nwPeHjR3wxSYFH/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Nếu stack đủ khéo, bạn có thể chỉnh độ cao các phần và kiếm Tetris.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRPScGLCzLZRMQZnjI_8cNJqjNhJejTUsNQqv8Cj6DqcdpdnTzwIvkbvkwMvf9D9kBo8Fqt7rrGT8kW/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Chừa phần bên trái để bỏ các khối không theo mong muốn.</p>
+        <p>Nếu xóa bằng các cặp khối, phải cẩn thận để phần dư không bị đóng băng. Tùy thuộc vào medal và tốc độ, nhưng nếu sau 4 khối thì khả năng cao là nó sẽ đóng băng. Vậy nên...</p>
+        <ul>
+            <li>Sau 1 cặp, trở về xóa phần dư</li>
+            <li>Sau 2 cặp, tăng tốc, xóa phần dư thật nhanh trước khi nó đóng băng</li>
+            <li>Đừng nghĩ đến việc xóa 3 cặp liên tục...</li>
+        </ul>
+    </div>
+    <div class="content" id="123w">
+        <h1>Funneling (1-2-3 Wide)</h1>
+        <center>
+                <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/f0TmVzPk54M?si=pXu8bFdmLD_I80ew" title="Funnelling Demonstration"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <p>Sáng tạo bởi suitougreentea</p>
+        <h3 style="color: #e66">Diff</h3>
+        <ul>
+                <li class="setuprt l2">Setup: Bình thường</li>
+                <li class="setuprt l3">Tỉ lệ mắc sai lầm: Có nhưng phải xử lí nhanh</li>
+                <li class="setuprt l1">Tốc độ đặt khối: Rùa tí vẫn ổn</li>
+                <li class="setuprt l2">Tốc độ xóa hàng: Trung bình</li>
+                <li class="setuprt l2">Thời gian đóng băng: ≈140f. 6-38-0-28 khi luyện tập, 0-50-0-28 thực tế</li>
+        </ul>
+        <h3 style="color: #f69">Từ dưới lên trên, setup này cần:</h3>
+        <ul>
+                <li>Phần 1W (khoảng 10 hàng)</li>
+                <li>Phần 2W (2 hàng)</li>
+                <li>Phần 3W (2 hàng)</li>
+        </ul>
+        <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vREvL0DHCS_O-CeP9EWKv8Uj1KxX_5EMOO0Q62TFyeXzRtiSo-itglvWvHtwb0vC7kIQ3iFzJRABcjq/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Phần 1W dùng để xóa Tetris, hạ thấp stack.</p>
+        <p>Phần 2W và 3W dùng để xóa các cặp khối</p>
+        <ul>
+                <li>O</li>
+                <li>L</li>
+                <li>S+L</li>
+                <li>S+J</li>
+                <li>T+T</li>
+                <li>J+T</li>
+        </ul>
+        <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vRnjJpNQbo7CA0z_xZQQ9QxkaVfG-Hamk8WSYIjLJA-xYjWjK-v3AC6sdgcLR4fM7v6p7TVWIUQsdqe/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Tetris sẽ lấy đi phần 1W, nên bạn có thể sẽ phải xây lại setup (sẽ gọi là "bổ sung").</p>
+        <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vRTrQdnee3tWwZWeux9wbmAId_iRfwl25CNzRFkVdyTA5LgP3TPLQWLIrzjF1GZNNdzYWDHBN7uSziG/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3 style="color: #3d9">Điểm thuận lợi</h3>
+        <p>Kể cả có mắc sai lầm ở dưới, miễn phần 1W có ít nhất 4 hàng, bạn vẫn có thể xóa bỏ các sai lầm đó.</p>
+        <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vSkV5wDzfZ-5js2VxuD5kBQuinGOG1Ton7u3grWXS-o6kgWsLNscrVGWsH8JKyAihWns7KG2ChcNUcD/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Vì có thể nhận medal Tetris, nên bạn sẽ có tốc độ tăng level nhanh hơn ở phần END GAME.</p>
+        <h3 style="color: #f44">Điểm bất lợi</h3>
+        <p>Nếu có nhiều S/Z, bạn sẽ phải lựa chọn giữa bỏ sang trái hoặc phá setup và bổ sung.</p>
+        <h3 style="color: #dac">Mẹo</h3>
+        <p>Bổ sung là phần khó nhất của chiến thuật này. Nếu bạn có thể đảm bảo những điều sau đây, tỉ lệ thành công sẽ tăng lên rất nhiều.</p>
+        <ul>
+                <li>Nếu bạn có thể đảm bảo 4 hàng phần 1W, thì các sai lầm ở dưới không thành vấn đề.</li>
+                <li>Phải biết cách sửa khi phần 2W không cao 2 hàng.</li>
+        </ul>
+        <p>Phần 2W <b>BẮT BUỘC</b> phải cao 2 hàng. Nên không chỉ học cách xây 2 hàng, mà còn những cách sửa khi không phải 2 hàng.</p>
+        <center>
+                <iframe class="embed"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vRTrQdnee3tWwZWeux9wbmAId_iRfwl25CNzRFkVdyTA5LgP3TPLQWLIrzjF1GZNNdzYWDHBN7uSziG/pubembed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>So với 2W, sẽ có nhiều trường hợp phải bỏ khối sang trái hơn. Sẽ rất tốt nếu bạn có thể xử lí nó mà không làm stack quá xấu.</p>
+        <p>Có rất nhiều cặp khối đi cùng với J, nên hãy đưa ra lựa chọn hợp lí dựa vào NEXT.</p>
+        <p>Bổ sung sau level 2000 rất nguy hiểm, nên bổ sung vào 1800-1900 rồi tập trung xóa từ 2000 trở đi. Nếu phần 1W cạn, có thể xây phần 4W để xóa khối I nằm ngang.</p>
+    </div>
+    <div class="content" id="ks">
+        <h1>Freestyle (Korean Stacking)</h1>
+        <center>
+            <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/vsEorFGFLBk?si=rlG1tm-yZNkIW2Fx" title="Funnelling Demonstration"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <h3 style="color: #e66">Diff</h3>
+        <ul>
+            <li class="setuprt l1">Setup: Xếp bừa :)))</li>
+            <li class="setuprt l1">Tỉ lệ mắc sai lầm: Có nhưng phải xử lí nhanh</li>
+            <li class="setuprt l5">Tốc độ đặt khối: Manlock đi là vừa</li>
+            <li class="setuprt l5">Tốc độ xóa hàng: Siêu rùa</li>
+            <li class="setuprt l5">Thời gian đóng băng: ≈240f. 15-38-14-50 khi practice, thực tế...???</li>
+        </ul>
+        <p>Chẳng cần setup gì cả, cứ xóa khối trước khi nó đóng băng là được</p>
+        <h3 style="color: #3d9">Điểm thuận lợi</h3>
+        <p>Chẳng cần chuẩn bị gì cả! Cứ thế xóa hàng thôi.</p>
+        <h3 style="color: #f44">Điểm bất lợi</h3>
+        <p>Một khi khối đã đóng băng, nó sẽ trở nên vô dụng. Nên đây là thử thách đạt level 2600 với ít khối băng nhất.</p>
+        <p>Thời gian đóng băng là rào cản lớn nhất của chiến thuật này. 15-38-14-50 là tối đa trong luyện tập, nhưng cũng chỉ vừa đủ. Thực tế rất khó để đạt 240f.</p>
+        <p>Tốc độ là yếu tố cần thiết trong chiến thuật này. Nhưng manlock với Cyclone rất khó, yêu cầu luyện tập và tập trung cao độ.</p>
+        <p>Bạn gần như chỉ xóa Single và Double, tốc độ tiến triển level sẽ rất chậm. Không phù hợp nếu đang thực hiện time attack.</p>
+        <h3 style="color: #dac">Mẹo</h3>
+        <p><b>Xây thật phẳng.</b> Nếu xây nhấp nhô, một phần của khối sẽ đóng băng và bạn không thể xóa hàng được.</p>
+        <p>Dùng các khối phẳng (đặc biệt là I) nằm. Nếu bạn đặt dọc, số hàng cần xóa sẽ tăng lên và mất thời gian. Chỉ đặt dọc nếu đủ tự tin là mình xóa được hoặc là muốn bỏ một phần bảng và đi lên.</p>
+        <p><b>Cảm nhận thời gian đóng băng bằng cách luyện tập.</b> Tập trung vào khối đã khóa và xem nó mất bao lâu để đóng băng, để rồi lựa chọn xóa hàng hoặc bỏ và đi lên.</p>
+        <p>Nếu xóa hàng có khối băng, stack sẽ rất xấu, nên đôi lúc sẽ tốt hơn để bỏ và đi lên.</p>
+        <p>Nếu hàng nào đó có khối băng, hãy lấp 9 khối vào hàng đó và chờ nó đóng băng. Việc này giúp việc xóa hàng ở trên dễ dàng hơn.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vRXz9WBN5j8WH4gFMXZfYmyyjCaCxZUguFAkE8Rrm_G2hjxl5-SI1LQmWxeOvCAWgKlqkAUcGmea2gf/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3>Side notes</h3>
+        <p><strike>Đél gì nhiều chữ thế???</strike></p>
+    </div>
+    <div class="content" id="tetrisks">
+        <h1>Flat 9-0 (Tetris + K.S.)</h1>
+        <center>
+            <iframe class="embed video" width="640" height="480" src="https://www.youtube.com/embed/Hq9AltUC_9s?si=netJUt0VD_u_PdfO" title="Funnelling Demonstration"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </center>
+        <h3 style="color: #e66">Diff</h3>
+        <ul>
+            <li class="setuprt l2">Setup: Bình thường</li>
+            <li class="setuprt l3">Tỉ lệ mắc sai lầm: Có nhưng phải xử lí nhanh</li>
+            <li class="setuprt l4">Tốc độ đặt khối: S13 Shirase chắc được</li>
+            <li class="setuprt l4">Tốc độ xóa hàng: Hơn mỗi K.S.</li>
+            <li class="setuprt l3">Thời gian đóng băng: ≈200f. 15-30-0-45 khi luyện tập, 0-50-0-50 thực tế</li>
+        </ul>
+        <p>Vẫn là Korean Stacking, nhưng bạn có thể kiếm thêm Tetris.</p>
+        <h3 style="color: #3d9">Điểm thuận lợi</h3>
+        <p>Chơi rất giống Tetris phổ thông.</p>
+        <p>Có thể kiếm thêm medal Tetris cho END GAME. Khi đến đó, bạn có thể tiếp tục dùng chiến thuật này hoặc đổi sang chiến thuật khác với tốc độ tăng level nhanh hơn.</p>
+        <p>Bạn vẫn có thể chơi tiếp miễn là bạn kiếm được Tetris. Không cần quá nhiều hàng để setup, <b>và bạn có thể khôi phục từ dòng thứ 15.</b></p>
+        <h3 style="color: #f44">Điểm bất lợi</h3>
+        <p>Nếu bạn lỡ chặn lỗ Tetris và nó đóng băng, thì bạn sẽ mất luôn phần dưới của bảng. Những trường hợp thế này xảy ra <b>khi bạn nghĩ là mình có thể xóa hàng trước khi nó đóng băng.</b></p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQcpC-Kgirpfpmzs5W9jjz6YcLkBPY6rIkLtBRC63EBb5faM3XyBnX3210j3VAFNm0GhfEZCrSE_HsT/pubembed?start=false&amp;loop=false&amp;delayms=3000"
+            frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <h3 style="color: #dac">Mẹo</h3>
+        <p>Giống như K.S., <b>cảm nhận thời gian đóng băng.</b></p>
+        <p>Đôi lúc, bạn có thể <b>lựa chọn để lỗ trong một lúc.</b> Miễn phần trên của nó không bị đóng băng, bạn vẫn có thể lấp lại.</p>
+        <center>
+            <iframe class="embed"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSyaQFCeHVSjOS1EQVeXSzw5_JXvbGbc-kQTVjAXP3giFlais4_QH-noSGQbBZOtGDRJYQbuxOV92Ip/pubembed?start=false&loop=false&delayms=3000"
+            frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </center>
+        <p>Nếu đã chọn xây Tetris, <b>hãy xây một cách chủ động</b>. Nếu như xây từng chút một và mắc sai lầm, sẽ không thể xóa Tetris để khôi phục được.</p>
+    </div>
+    <div class="content" id="end">
+        <h1>KẾT</h1>
+        <p>
+            Mong là guide này sẽ giúp bạn thay đổi suy nghĩ từ "Khó thế sao chơi???" thành "Cũng thú vị, để thử xem sao." <br>
+            Và biết đâu được, bạn có thể chính là Grand-Master tiếp theo...
+        </p>
+        <h2>CREDITS</h2>
+        <ul>
+            <li>TGM4 Development Team</li>
+            <li>suitougreentea: <a href="https://note.com/suitougreentea/n/n1553470bca3d">Guide gốc (tiếng Nhật)</a>, Video setup, Slides</li>
+            <li>RunningOutRate: Video setup, Tweet</li>
+            <li>ItzBlack: Dịch</li>
+            <li>Aintops: Nhạc khi t đang ngồi dịch (nhạc peak cực nghe thử mấy bài đi)</li>
+            <li>Và <b>bạn!</b> Vì đã đọc</li>
+        </ul>
+    </div>
+
+    <script>
+        // i have to handle the header buttons
+        document.addEventListener("DOMContentLoaded", e => {
+            document.querySelectorAll(".header_nav").forEach(el => {
+                el.addEventListener("click", n => {
+                    const targetid = el.getAttribute("data-target")
+                    document.getElementById(targetid).scrollIntoView({ behavior: "smooth"})
+                    HightlightHeaderButton(targetid)
+                })
+            })
+        })
+
+        function HightlightHeaderButton(target) {
+            document.querySelectorAll(".header_nav").forEach(el => {
+                el.classList.remove("active")
+            })
+            document.querySelector(`.header_nav[data-target="${target}"]`).classList.add("active")
+        }
+    </script>
+</body>
+</html>
