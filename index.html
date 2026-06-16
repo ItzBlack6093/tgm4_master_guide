@@ -24,6 +24,7 @@
     <div class="content" id="intro">
         <h1>MỞ ĐẦU</h1>
         <p>Hi! Đây là một cái guide (chắc là) cơ bản để nói về chế độ Master của Tetris: The Grandmaster 4 - Absolute Eye</p>
+        <p>Guide này được viết bởi suitougreentea, và dịch sang tiéng Việt bởi ItzBlack</p>
     </div>
     <div class="content" id="basics">
         <h1>CƠ BẢN VỀ MASTER MODE</h1>
@@ -488,7 +489,7 @@
             const targetEl = document.getElementById(id)
             const headerHeight = document.getElementById("header").getBoundingClientRect().height ;
             var elPos = targetEl.getBoundingClientRect().top;
-            var finalPos = elPos + window.pageYOffset - headerHeight                
+            var finalPos = elPos + window.pageYOffset - headerHeight           
             window.scrollTo({
                 top: finalPos,
                 behavior: "smooth"
@@ -501,6 +502,25 @@
             })
             document.querySelector(`.header_nav[data-target="${target}"]`).classList.add("active")
         }
+
+        function HeaderOnScroll() {
+            const currentY = window.scrollY
+            document.querySelectorAll(".header_nav").forEach(el => {
+                const targetid = el.getAttribute("data-target")
+                const targetEl = document.getElementById(targetid)
+
+                const headerHeight = document.getElementById("header").getBoundingClientRect().height ;
+                var elPos = targetEl.getBoundingClientRect().top;
+                var finalPos = elPos + window.pageYOffset - headerHeight           
+                if (currentY + window.innerHeight / 3 >= finalPos) {
+                    HightlightHeaderButton(targetid)
+                    return
+                }
+            })
+        }
+        document.addEventListener("scroll", HeaderOnScroll, {passive: true})
+
+
     </script>
 </body>
 </html>
