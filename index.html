@@ -478,11 +478,22 @@
             document.querySelectorAll(".header_nav").forEach(el => {
                 el.addEventListener("click", n => {
                     const targetid = el.getAttribute("data-target")
-                    document.getElementById(targetid).scrollIntoView({ behavior: "smooth"})
+                    ScrollToSection(targetid)
                     HightlightHeaderButton(targetid)
                 })
             })
         })
+
+        function ScrollToSection(id) {
+            const targetEl = document.getElementById(id)
+            const headerHeight = document.getElementById("header").getBoundingClientRect().height ;
+            var elPos = targetEl.getBoundingClientRect().top;
+            var finalPos = elPos + window.pageYOffset - headerHeight                
+            window.scrollTo({
+                top: finalPos,
+                behavior: "smooth"
+            });
+        }
 
         function HightlightHeaderButton(target) {
             document.querySelectorAll(".header_nav").forEach(el => {
