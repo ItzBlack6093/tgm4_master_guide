@@ -114,10 +114,6 @@
                 width="480" height="306"></iframe>
             </center>
             <div class="note" style="color: #f22;">Nếu bạn không thấy slide, vui lòng tải lại trang</div>
-            <div class="note" style="color: #f72;">
-                Nếu quá nhỏ (chắc là do bạn đọc trên điện thoại / màn hình dọc), mình khuyến khích xoay ngang thiết bị <br>
-                ~ tui bị ngu css - ItzBlack
-            </div>
             <p>
                 Bạn chơi Tetris càng lâu, bạn sẽ nhận ra sự lĩn hàm của gimmick này. Đặc biệt là người chơi Standard Rule <br>
                 Đây cũng chính là một trong những lí do khiến Master Pikii rất khó
@@ -489,6 +485,8 @@
                     HightlightHeaderButton(targetid)
                 })
             })
+
+            HeaderOnScroll()
         })
 
         function ScrollToSection(id) {
@@ -510,19 +508,24 @@
         }
 
         function HeaderOnScroll() {
-            const currentY = window.scrollY
-            document.querySelectorAll(".header_nav").forEach(el => {
-                const targetid = el.getAttribute("data-target")
+            const currentY = window.pageYOffset
+            const entries = document.querySelectorAll(".header_nav").entries()
+            const arr = Array.from(entries)
+            arr.reverse()
+
+            const headerHeight = document.getElementById("header").getBoundingClientRect().height;
+
+            for (const [idx, element] of arr) {
+                const targetid = element.getAttribute("data-target")
                 const targetEl = document.getElementById(targetid)
 
-                const headerHeight = document.getElementById("header").getBoundingClientRect().height;
                 var elPos = targetEl.getBoundingClientRect().top;
-                var finalPos = elPos + window.pageYOffset - headerHeight
-                if (currentY + window.innerHeight / 6 >= finalPos) {
+                var finalPos = elPos - headerHeight
+                if (finalPos <= headerHeight) {
                     HightlightHeaderButton(targetid)
                     return
                 }
-            })
+            }
         }
         document.addEventListener("scroll", HeaderOnScroll, {passive: true})
 
