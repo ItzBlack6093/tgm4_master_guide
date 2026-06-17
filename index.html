@@ -415,13 +415,14 @@
         <p>Dùng các khối phẳng (đặc biệt là I) nằm. Nếu bạn đặt dọc, số hàng cần xóa sẽ tăng lên và mất thời gian. Chỉ đặt dọc nếu đủ tự tin là mình xóa được hoặc là muốn bỏ một phần bảng và đi lên.</p>
         <p><b>Cảm nhận thời gian đóng băng bằng cách luyện tập.</b> Tập trung vào khối đã khóa và xem nó mất bao lâu để đóng băng, để rồi lựa chọn xóa hàng hoặc bỏ và đi lên.</p>
         <p>Nếu xóa hàng có khối băng, stack sẽ rất xấu, nên đôi lúc sẽ tốt hơn để bỏ và đi lên.</p>
-        <p>Nếu hàng nào đó có khối băng, hãy lấp 9 khối vào hàng đó và chờ nó đóng băng. Việc này giúp việc xóa hàng ở trên dễ dàng hơn.</p>
+        <p>Nếu hàng nào đó có khối băng, hãy lấp 9 khối vào hàng đó và chờ nó đóng băng. Nó sẽ giúp việc xóa hàng ở trên dễ dàng hơn.</p>
         <center>
             <iframe class="embed"
             src="https://docs.google.com/presentation/d/e/2PACX-1vRXz9WBN5j8WH4gFMXZfYmyyjCaCxZUguFAkE8Rrm_G2hjxl5-SI1LQmWxeOvCAWgKlqkAUcGmea2gf/pubembed?start=false&loop=false&delayms=3000"
             frameborder="0" width="640" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </center>
         <h3>Side notes</h3>
+        <p>Nếu bạn muốn luyện tập Cyclone theo một cách xàm nhất có thể, hãy thử chơi bằng strat này.</p>
         <p><strike>Đél gì nhiều chữ thế???</strike></p>
     </div>
     <div class="content" id="tetrisks">
@@ -463,8 +464,9 @@
     <div class="content" id="end">
         <h1>KẾT</h1>
         <p>
-            Mong là guide này sẽ giúp bạn thay đổi suy nghĩ từ "Khó thế sao chơi???" thành "Cũng thú vị, để thử xem sao." <br>
-            Và biết đâu được, bạn có thể chính là Grand-Master tiếp theo...
+            Cảm ơn bạn vì đã dành thời gian ra để đọc guide này <br>
+            Mong là nó sẽ giúp bạn thay đổi suy nghĩ từ "Khó thế sao chơi???" thành "Cũng thú vị, để thử xem sao." <br>
+            Và biết đâu được, bạn có thể chính là Grand-Master tiếp theo... <br>
         </p>
         <h2>CREDITS</h2>
         <ul>
@@ -513,10 +515,10 @@
                 const targetid = el.getAttribute("data-target")
                 const targetEl = document.getElementById(targetid)
 
-                const headerHeight = document.getElementById("header").getBoundingClientRect().height ;
+                const headerHeight = document.getElementById("header").getBoundingClientRect().height;
                 var elPos = targetEl.getBoundingClientRect().top;
-                var finalPos = elPos + window.pageYOffset - headerHeight           
-                if (currentY + window.innerHeight / 3 >= finalPos) {
+                var finalPos = elPos + window.pageYOffset - headerHeight
+                if (currentY + window.innerHeight / 6 >= finalPos) {
                     HightlightHeaderButton(targetid)
                     return
                 }

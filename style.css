@@ -93,7 +93,7 @@ html {
 	padding: .25em;
 }
 
-center > * {
+center > *:not(img):not(table) {
 	height: 50vh !important;
 	width: 50vw !important;
 }
