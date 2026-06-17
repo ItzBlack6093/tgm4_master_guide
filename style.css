@@ -93,7 +93,7 @@ html {
 	padding: .25em;
 }
 
-center > * {
+center > *:not(.twitter-tweet) {
 	max-height: 50vh;
 	max-width: 90vw;
 }
