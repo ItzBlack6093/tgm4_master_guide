@@ -93,9 +93,9 @@ html {
 	padding: .25em;
 }
 
-.content center > * {
-	max-height: 50vh !important;
-	max-width: 50vw !important;
+center > * {
+	height: 50vh !important;
+	width: 50vw !important;
 }
 
 .setuprt.l1 {
